@@ -1,0 +1,390 @@
+/* Estilos Globais */
+body {
+    margin: 0;
+    font-family: 'Stalinist One', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+
+header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FB7C05;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 1;
+}
+
+.tituloHeader{
+    display: inline-flex;
+    align-items: center;
+}
+
+.tituloHeader > a{
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.tituloHeader > a:hover{
+    color: white;
+}
+
+.tituloHeader > img{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 15px;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.banner {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.linksHeader > a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-family: 'Stalinist One', sans-serif;
+    font-size: large;
+}
+
+.linksHeader > a:hover {
+   color: #e1e1e1;
+    text-decoration: underline;
+}
+
+.color1,
+.color2 {
+    padding: 40px 20px;
+}
+
+.color1 > h2{
+    color: #00AEEF;
+}
+
+.color2{
+    background-color: #00AEEF;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.color2 > h2{
+    color: #ffffff;
+    
+}
+
+.color2 > button{
+    background-color: white;
+    color: #00AEEF;
+}
+
+.color2 > button:hover{
+    background-color: rgb(204, 204, 204);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.slider { 
+    width: 50%;
+    margin: auto; 
+    overflow: hidden; 
+    position: relative; 
+    text-align: center;
+} 
+
+.slides { 
+    display: flex; 
+    transition: transform 0.5s ease-in-out; 
+    width: 100%;    
+} 
+
+.slide { 
+    min-width: 100%;
+    box-sizing: border-box; 
+    position: relative; 
+    height: 20vw;
+} 
+
+.slide > img{
+    display: block;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.description { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    padding: 10px; 
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff; 
+    position: absolute; 
+    bottom: 0;
+    justify-self: center;
+    width: 90%; 
+    border-radius: 0 0 10px 10px; 
+
+    left:  50%;
+    transform: translateX(-50%);
+}
+
+.navigation { 
+    position: absolute; 
+    top: 50%; 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+    transform: translateY(-50%); 
+} 
+
+.navigation-button { 
+    background: #00AEEF; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    cursor: pointer; 
+    border-radius: 10px;
+}
+.navigation-button:hover {
+    background-color: #008CBF;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00AEEF;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #008CBF;
+    transform: scale(1.05);
+}
+
+.jogos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.jogo {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    height: 300px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.jogo:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px #00000042;
+}
+
+.jogo>img {
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+}
+
+.jogo > h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.jogo > button { 
+    align-self: center; 
+    margin-top: 10px; 
+    padding: 10px 20px; 
+    background-color: #00AEEF; 
+    color: #ffffff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 18px; 
+    transition: background-color 0.3s ease; 
+} 
+
+.jogo > button:hover { 
+    background-color: #008CBF; 
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #ffffff;
+}
+
+.color1 > .jogos > .jogo{
+    background-color: #00AEEF ;
+    color: white;
+}
+
+.color1 > .jogos > .jogo > button{
+    background-color: #ffffff ;
+    color: #00AEEF;
+}
+
+#SaibaMaisJogo{
+
+    position: fixed;
+    display:block;
+
+    top: 100vh;
+
+    width: 80vw;
+    height: 70vh;
+    background-color: #5f8fff;
+    border-radius: 20px;
+    padding: 50px;
+
+    left: 50%; 
+    transform: translateX(-50%);
+
+    scrollbar-color: rgb(210, 210, 210) rgba(255, 255, 255, 0);
+    scrollbar-width: thin;
+
+    overflow: auto;
+
+    transition: all 0.5s ease-in-out;
+    
+}
+
+#SaibaMaisJogo > h3{
+    text-align: center;
+}
+
+#SaibaMaisJogo > button{
+    display: block;
+    color: black;
+    margin-bottom: 20px;
+    background-color: #d6f4ff;
+    border-radius: 30px;
+    border: None;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+#SaibaMaisJogo > button:hover{
+    transform: scale(1.05);
+}
+
+.Conteudo{
+    display: flex;
+    overflow-y: auto;
+}
+
+.Conteudo > img{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.Textos{
+    display: flex;
+    flex-direction: column;
+}
+
+.Textos > h3{
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.Textos > p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+#SaibaMaisJogo.exibir{
+    top: 30vh;
+}
+
+.lojasOficiais{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.lojasOficiais > a{
+    text-decoration: none;
+    color: black;
+}
+
+.lojasOficiais > a > button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+
+    background-color: #0084ff;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.lojasOficiais > a > button:hover{
+    transform: scale(1.1);
+}
+
+.lojasOficiais > a > button > img{
+    height: 100%;
+    width: 50px;
+}
+
+#gameplay{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#gameplay > img{
+    width: 20%;
+    height: 100px;
+    border-radius: 10px;
+    margin: 15px;
+}
