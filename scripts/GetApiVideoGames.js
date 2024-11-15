@@ -160,52 +160,52 @@ function AdicionarConsole(objeto){
     for (let i in objeto){
         let nome = objeto[i].name
 
-        const novaDiv = document.createElement('div');
-        novaDiv.className = "console"
-        novaDiv.id = `console${nome}`
-        
-        let valor = sessionStorage.getItem('console')
-        
-        if (valor == objeto[i].id){
-          novaDiv.style.backgroundColor = "#fb7c0584"
-
-          novaDiv.style.borderRadius = "20px"
-
-          botaoAnteriorID = `console${nome}`
-          ExibirInformacoes(novaDiv, objeto[i])
-        }
-
-        novaDiv.addEventListener('click', () => {
+        if (nome != "" Android){
+            const novaDiv = document.createElement('div');
+            novaDiv.className = "console"
+            novaDiv.id = `console${nome}`
             
-            sessionStorage.setItem('console', objeto[i].id)
-
-            if (botaoAnteriorID != -1){
-                let botaoAnterior = document.getElementById(botaoAnteriorID)
-
-                botaoAnterior.style.backgroundColor = "#FFFFFF"
-                botaoAnterior.style.borderRadius = "0"
-
+            let valor = sessionStorage.getItem('console')
+            
+            if (valor == objeto[i].id){
+              novaDiv.style.backgroundColor = "#fb7c0584"
+    
+              novaDiv.style.borderRadius = "20px"
+    
+              botaoAnteriorID = `console${nome}`
+              ExibirInformacoes(novaDiv, objeto[i])
             }
-            
-            novaDiv.style.backgroundColor = "#fb7c0584"
-            novaDiv.style.borderRadius = "20px"
-            botaoAnteriorID = `console${nome}`
-            ExibirInformacoes(novaDiv, objeto[i])
-        }); 
-
-        AdicionarConsoleNaDevidaEmpresa(nome, consoles, novaDiv)
-
-        const novaImagem = document.createElement('img');
-        novaImagem.src = `${objeto[i].image_background}`
-
-        novaDiv.appendChild(novaImagem)
-
-        const novoTexto = document.createElement('p');
-        novoTexto.innerHTML = `${objeto[i].name}`
-
-        novaDiv.appendChild(novoTexto)
-
-        
+    
+            novaDiv.addEventListener('click', () => {
+                
+                sessionStorage.setItem('console', objeto[i].id)
+    
+                if (botaoAnteriorID != -1){
+                    let botaoAnterior = document.getElementById(botaoAnteriorID)
+    
+                    botaoAnterior.style.backgroundColor = "#FFFFFF"
+                    botaoAnterior.style.borderRadius = "0"
+    
+                }
+                
+                novaDiv.style.backgroundColor = "#fb7c0584"
+                novaDiv.style.borderRadius = "20px"
+                botaoAnteriorID = `console${nome}`
+                ExibirInformacoes(novaDiv, objeto[i])
+            }); 
+    
+            AdicionarConsoleNaDevidaEmpresa(nome, consoles, novaDiv)
+    
+            const novaImagem = document.createElement('img');
+            novaImagem.src = `${objeto[i].image_background}`
+    
+            novaDiv.appendChild(novaImagem)
+    
+            const novoTexto = document.createElement('p');
+            novoTexto.innerHTML = `${objeto[i].name}`
+    
+            novaDiv.appendChild(novoTexto)
+        }
     }
 }
 
