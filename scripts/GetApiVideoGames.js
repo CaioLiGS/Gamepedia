@@ -160,7 +160,7 @@ function AdicionarConsole(objeto){
     for (let i in objeto){
         let nome = objeto[i].name
 
-        if (nome != "" Android){
+        if (nome != "Android"){
             const novaDiv = document.createElement('div');
             novaDiv.className = "console"
             novaDiv.id = `console${nome}`
